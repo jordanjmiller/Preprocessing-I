@@ -57,3 +57,45 @@ html, body {
     height: 100%;
 }
 
+//VARS
+	@backgroundColor: #E9ECEF;
+	@test: red;
+//VARS
+
+.container{
+	widows: 90%;
+	margin:0 auto;
+
+
+	header{
+		display: flex;
+		justify-content: flex-end;
+		width: 100%;
+
+		nav {
+			width:50%;
+			display: flex;
+			justify-content: space-between;
+
+			a {
+				width: 20%;
+			}//a
+		}//nav
+	}//header
+
+
+}//container
+
+.top-section{ 
+width:80%;
+background-color: @test;
+border: 1px solid red;
+
+	.devImgdiv{
+		width: 50%;
+		background-color: red;
+		img {
+			width: 100%;
+		}
+	}
+}
