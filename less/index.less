@@ -114,11 +114,20 @@ html{
 			width:30%;
 			display: flex;
 			justify-content: space-between;
-
+			@media( max-width: @mobile ){
+				width: 100%;
+				flex-flow: column wrap;
+				justify-content: center;
+			}
 			a {
 				//width: 25%;
 				.textDeco();
 				//border: 1px solid black;
+			@media( max-width: @mobile ){
+				width: 100%;
+				text-align:center;
+				padding: 1.5%;
+			}
 			}//a
 			a:hover{
 				text-decoration: underline;

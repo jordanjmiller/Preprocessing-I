@@ -180,10 +180,24 @@ html {
   display: flex;
   justify-content: space-between;
 }
+@media (max-width: 500px) {
+  .container header nav {
+    width: 100%;
+    flex-flow: column wrap;
+    justify-content: center;
+  }
+}
 .container header nav a {
   text-decoration: none;
   text-align: right;
   color: black;
+}
+@media (max-width: 500px) {
+  .container header nav a {
+    width: 100%;
+    text-align: center;
+    padding: 1.5%;
+  }
 }
 .container header nav a:hover {
   text-decoration: underline;
