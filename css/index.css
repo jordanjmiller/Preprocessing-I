@@ -137,6 +137,13 @@ body {
 html {
   font-size: 62.5%;
 }
+@font-face {
+  font-family: 'Chilanka';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('Chilanka Regular'), local('Chilanka-Regular'), url(https://fonts.gstatic.com/s/chilanka/v5/WWXRlj2DZQiMJYaYRoJXKdU.ttf) format('truetype');
+}
 .container {
   width: 80%;
   max-width: 900px;
@@ -150,6 +157,7 @@ html {
 }
 .container h1 {
   font-size: 4rem;
+  font-family: 'Chilanka', cursive;
 }
 .container h2 {
   font-size: 3rem;
