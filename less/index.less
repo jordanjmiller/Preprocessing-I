@@ -56,4 +56,241 @@ table {
 html, body {
     height: 100%;
 }
+html{
+	font-size: 62.5%;
+}
+//VARS
+	@backgroundColor: #E9ECEF;
+	@test: red;
+	@textColor: black;
+	@border: 1px solid black;
+	@mobile: 500px;
+	@import url('https://fonts.googleapis.com/css?family=Chilanka&display=swap');
+	@fancyfont: 'Chilanka', cursive;
+//VARS
+//MIXINS
+	.textDeco(){
+		text-decoration: none;
+		text-align: right;
+		color: @textColor;
+	}
+	.center(){
+		display:flex;
+		justify-content: center;
+		align-items:center;
+	}
+//MIXINS
+
+
+.container{
+	width: 80%;
+	max-width: 900px;
+	margin:0 auto;
+	h1, h2, h3, h4{
+		font-weight: bold;
+	}
+	h1{
+		font-size: 4rem;
+		font-family: @fancyfont;
+	}
+	h2{
+		font-size: 3rem;
+	}
+	h3{
+		font-size: 2.4rem;
+	}
+	h4{
+		font-size: 2.2rem;
+	}
+
+	header{
+		display: flex;
+		justify-content: flex-end;
+		font-size: 1.6rem;
+		width: 100%;
+		padding: 1% 0;
+
+		nav {
+			width:30%;
+			display: flex;
+			justify-content: space-between;
+			@media( max-width: @mobile ){
+				width: 100%;
+				flex-flow: column wrap;
+				justify-content: center;
+			}
+			a {
+				//width: 25%;
+				.textDeco();
+				//border: 1px solid black;
+			@media( max-width: @mobile ){
+				width: 100%;
+				text-align:center;
+				padding: 1.5%;
+			}
+			}//a
+			a:hover{
+				text-decoration: underline;
+			}
+		}//nav
+	}//header
+
+	.top-section{ 
+		width:100%;
+		margin: 0 auto;
+		padding: 3% 3%;
+		background-color: grey;
+		border: 2px solid black;
+	
+		@media( max-width: @mobile )
+		{
+			background-color: pink;
+		}
+
+			h4{
+				border-bottom: 1px solid black;
+			}
+
+			.devImgdiv{
+				width: 25%;
+				@media( max-width: @mobile ){
+					width: 100%;
+					margin: 0 auto;
+				}
+				img {
+					width: 100%;
+					border: 2px solid black;
+				}//img
+			}//devImgdiv
+			.top-content{
+				background-color: @backgroundColor;
+				border: 2px solid black;
+				margin: 3% 0%;
+				padding: 1% 1% 3% 1%;
+				font-size: 1.6rem;
+				h4{
+					border-bottom: 1px solid black;
+					padding: 1% 0% 3% 1%;
+				}
+				p{
+					padding-top: 3%;
+					padding-left: 1%;
+				}
+			}
+		
+			button{
+				width:20%;
+				font-size: 2rem;
+				padding: 1% 3%;
+				background-color: grey;
+				border:2px solid white;
+				color: white;
+				@media( max-width: @mobile ){
+					width: 100%;
+					margin: 0 auto;
+				}
+			}
+
+	} //top-section
+
+
+	.middle-section{
+		background-color: @backgroundColor;
+		padding: 3% 1% 3% 1%;
+		font-size: 1.6rem;
+		display:flex;
+		border-left: 2px solid black;
+		border-right: 2px solid black;
+		@media( max-width: @mobile ){
+			// width: 100%;
+			// margin: 0 auto;
+			flex-direction: column;
+		}
+
+		.middle-contentLeft{
+			width:55%;
+			text-align: left;
+			font-size: 1.6rem;
+			padding-right: 1.5%;
+			@media( max-width: @mobile ){
+				width: 100%;
+				margin: 0 auto;
+				padding: 0 1.5% 0 1.5%;
+			}
+			//border: @border;
+		}
+		.middle-contentRight{
+			width:45%;
+			//border: @border;
+			li{
+				border: 1px solid lightgrey;
+				padding: 3%;
+			}
+			@media( max-width: @mobile ){
+				width: 100%;
+				margin: 0 auto;
+			}
+		}
+	}
+
+	.work-history{
+		border: 2px solid black;
+		//padding: 3% 0% 0% 0%;
+		h3{
+			padding-top: 1.5%;
+			padding-bottom: 1.5%;
+		}
+		.workhistoryDiv{
+			// display:flex;
+			// justify-content: space-around;
+			// flex-wrap: wrap;
+			.wh{
+				width:100%;
+			}
+			ul{
+				display: flex;
+				justify-content: space-around;
+				border-top: 1px solid lightgray;
+				
+				@media( max-width: @mobile ){
+					// width: 100%;
+					// margin: 0 auto;
+					justify-content: space-between;
+					//flex-direction: column;
+					flex-wrap: wrap;
+				}
+			}
+			li{
+				width:25%;
+				font-size: 2rem;
+				padding: 1.5%;
+				@media( max-width: @mobile ){
+					//width: 10%;
+					//padding: 1.5% 0% 1.5% 0%;
+					font-size: 1.5rem;
+				}
+			}
+			.firstUL{
+				font-weight: bold;
+			}
+			.firstLI{
+				width:10%
+			}
+			.bgcolored{
+				width:100%;
+				background-color: lightgrey;
+			}
+		}
+	}
+
+	footer{
+		background-color: grey;
+		color: white;
+		padding:3%;
+		text-align:center;
+		font-size: 1.8rem;
+		border: 2px solid black;
+		border-top: none;
+	}//footer
+}//container
 
